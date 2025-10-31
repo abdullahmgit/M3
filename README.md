@@ -52,6 +52,8 @@ void calculateEMI(float principal, float rate, int time) {
 
 
 ## OUTPUT
+![alt text](<C11 (2).png>)
+
 
 
 
