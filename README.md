@@ -80,10 +80,35 @@ To write a C program to generate the Fibonacci series for the value 6.
 7.	Stop the program.
 
 ## PROGRAM
+```
+#include <stdio.h>
+
+int main() {
+    int n = 6;        // number of terms
+    int a = 0, b = 1, c;
+
+    printf("Fibonacci series for %d terms:\n", n);
+
+    // print first two terms
+    printf("%d %d ", a, b);
+
+    // generate remaining terms
+    for (int i = 3; i <= n; i++) {
+        c = a + b;
+        printf("%d ", c);
+        a = b;
+        b = c;
+    }
+
+    printf("\n");
+    return 0;
+}
+```
 
 ## OUTPUT
 
 
+![alt text](<C12 (2).png>)
 
 
 
@@ -108,11 +133,33 @@ To write a C program to read n elements as input and print the last element of t
 5.	Stop the program.
 
 ## PROGRAM
+```
+#include <stdio.h>
+
+int main() {
+    int n;
+
+    printf("Enter the number of elements: ");
+    scanf("%d", &n);
+
+    int arr[n];  // declare array of size n
+
+    printf("Enter %d elements:\n", n);
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    printf("The last element of the array is: %d\n", arr[n - 1]);
+
+    return 0;
+}
+```
 
 ## OUTPUT
 
 
 
+![alt text](<C13 (2).png>)
 
 
 
@@ -138,11 +185,37 @@ To write a C Program to count total number of positive elements in an array.
 6.	Stop the program.
 
 ## PROGRAM
+```
+#include <stdio.h>
 
+int main() {
+    int n, count = 0;
 
+    printf("Enter the number of elements: ");
+    scanf("%d", &n);
+
+    int arr[n]; // declare array of size n
+
+    printf("Enter %d elements:\n", n);
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    // Count positive elements
+    for (int i = 0; i < n; i++) {
+        if (arr[i] > 0) {
+            count++;
+        }
+    }
+
+    printf("Total number of positive elements = %d\n", count);
+
+    return 0;
+}
+```
 ## OUTPUT
 
-
+![alt text](C14.png)
 
 
 
@@ -174,9 +247,36 @@ To write a C program to replace all even elements with 'E' in one dimensional ar
  Print the updated array after replacements.
 
 ## Program:
+```
+#include <stdio.h>
 
+int main() {
+    int n;
+
+    printf("Enter the number of elements: ");
+    scanf("%d", &n);
+
+    int arr[n];
+
+    printf("Enter %d elements:\n", n);
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &arr[i]);
+    }
+
+    printf("\nArray after replacing even elements with 'E':\n");
+    for (int i = 0; i < n; i++) {
+        if (arr[i] % 2 == 0)
+            printf("E ");
+        else
+            printf("%d ", arr[i]);
+    }
+
+    printf("\n");
+    return 0;
+}
+```
 ## Output:
- 
+ ![g](C15.png)
 
 
 ## Result:
